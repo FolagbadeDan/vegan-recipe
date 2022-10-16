@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PT+Sans+Narrow', Verdana, Geneva, Tahoma, sans-serif;
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000,);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh; 
+}
+
+.mobile-container{
+    width: 400px;
+    min-height: 100vh;
+    margin: 0px;
+    background: #fef9f8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7b733, #f9f7f6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f9f9f9, #fefcfb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+    box-shadow: 0 0 10px violet;
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+header{
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header input {
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+}
+
+header button {
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    margin-left: 10px;
+    color: rgb(236, 96, 88);
+}
+
+
+.fav-container {
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0.25rem 1rem;
+    text-align: center;
+    color: #eee;
+}
+
+.fav-meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 75px;
+}
+
+.fav-meals li img {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #cccccc1a;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span {
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+
+
+
+.fav-meals li .clear {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1.2rem;
+}
+
+.fav-meals li:hover .clear {
+    opacity: 1;
+}
+
+
+.meal {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 3px #3333331a;
+    cursor: pointer;
+    margin: 1.5rem;
+    overflow: hidden;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+    margin: 0;
+}
+
+.meal-body .fav-btn {
+    border: none;
+    background-color: transparent;
+    color: rgb(197, 188, 188);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.meal-body .fav-btn.active {
+    color: rebeccapurple;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup .close-popup {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.meal-info h1 {
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5af19;
+    padding: 2rem;
+    width: 400px;
+}
+
+
+.social-container button {
+        margin: 1rem;
+}
+.logo{
+    width: 100%;
+    height: 150px;
+    margin: 0;
+}
+.social-links button{
+    margin: 10px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    background-color: seashell
+
+}
+
+.social-links button :hover{
+    
+    color: rgb(255, 0, 0)
+
+}
+
